@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculation Results - AI Tax Assistant</title>
+    <link rel="stylesheet" href="results.css">
+</head>
+<body>
+    <header>
+        <h1>Tax Calculation Results</h1>
+        <p>Your personalized tax summary and suggestions</p>
+    </header>
+    <main>
+        <div id="results" class="results-container">
+            <div class="result-card" id="taxAmountCard">
+                <h3>Estimated Income Tax</h3>
+                <p id="taxAmount"></p>
+            </div>
+            <div class="result-card" id="taxableIncomeCard">
+                <h3>Taxable Income</h3>
+                <p id="taxableIncome"></p>
+            </div>
+            <div class="result-card" id="effectiveRateCard">
+                <h3>Effective Tax Rate</h3>
+                <p id="effectiveRate"></p>
+            </div>
+        </div>
+        <div class="suggestions-container">
+            <h2>AI Suggestions to Reduce Tax</h2>
+            <ul id="suggestions"></ul>
+        </div>
+        <div class="chart-container">
+            <h2>Tax Breakdown Visualization</h2>
+            <canvas id="taxChart"></canvas>
+        </div>
+        <div class="breakdown-container">
+            <h2>Tax Calculation Breakdown</h2>
+            <table id="breakdownTable">
+                <thead>
+                    <tr>
+                        <th>Step</th>
+                        <th>Description</th>
+                        <th>Amount (₹)</th>
+                    </tr>
+                </thead>
+                <tbody id="breakdownBody"></tbody>
+            </table>
+        </div>
+        <div class="actions">
+            <button id="backBtn" class="btn secondary">Back to Calculator</button>
+            <button id="printBtn" class="btn primary">Print Results</button>
+        </div>
+        <div class="ai-chat-container">
+            <h2>AI Tax Advisor (Powered by Gemini)</h2>
+            <div id="chatMessages"></div>
+            <input type="text" id="chatInput" placeholder="Ask a tax-related question..." />
+            <button id="sendBtn" class="btn primary">Send</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 AI Tax Assistant. Estimates only. Consult a professional.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="results.js"></script>
+</body>
+</html>
