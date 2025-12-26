@@ -1,1 +1,51 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tax Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>AI Tax Assistant</h1>
+    <p class="subtitle">Intelligent Tax Calculation & Optimization for Indian Residents</p>
+    <p>Helps users calculate income tax based on Indian tax laws. Suggests deductions and measures to reduce tax.</p>
+    <form id="taxForm">
+        <div class="form-group">
+            <label for="income">Annual Income (INR):</label>
+            <input type="number" id="income" required min="0">
+        </div>
+        
+        <div class="form-group">
+            <label for="status">Filing Status:</label>
+            <select id="status">
+                <option value="single">Single</option>
+                <option value="married">Married Filing Jointly</option>
+                <option value="head">Head of Household</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="dependents">Number of Dependents:</label>
+            <input type="number" id="dependents" min="0" value="0">
+        </div>
+        
+        <div class="form-group">
+            <label for="retirement">Retirement Contributions ($):</label>
+            <input type="number" id="retirement" min="0" value="0">
+        </div>
+        
+        <div class="form-group">
+            <label for="location">Location (State/Country):</label>
+            <input type="text" id="location" placeholder="e.g., California, USA">
+        </div>
+        
+        <button type="submit">Calculate Tax</button>
+        <button type="button" id="resetBtn">Reset</button>
+    </form>
+    <footer>
+        <p>&copy; 2025 AI Tax Assistant. This tool provides estimates only. Consult a tax professional for accurate advice.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
